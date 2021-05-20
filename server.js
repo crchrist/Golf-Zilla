@@ -9,6 +9,8 @@ const isLoggedIn = require('./middleware/isLoggedIn');
 const { default: axios } = require('axios');
 const db = require('./models');
 
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'));
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 
@@ -84,37 +86,16 @@ db.favoritesList.create({
 res.send('this should work')
 })
 
+app.get('/favorites', (req, res) => {
+  db.favoritesList.findAll().then((results)=>{
+    res.render('favoritesList', {favorite: results})
+  })
+})
 
-
-//API
-// app.get('/rickandmorty', (req, res) => {
-//   axios.get('https://rickandmortyapi.com/api/character')
-//     .then(function(response) {
-//       const promises = [];
-//       response.data.forEach(rickandmorty => {
-//         promises.push(new Promise((resolve, reject) => {
-//           axios.get(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=${encodeURI(rick.title)}`)
-//             .then(function(response) {
-//               resolve({
-//                 ...rickandmorty,
-//                 ...response.data,
-//               });
-//             })
-//             .catch(function(error) {
-//               reject(error);
-//             });
-//         }));
-//       }); 
-//       Promise.all(promises).then(rickandmorty => {
-//         res.render('rickandmortylist', { rickandmorty });
-//       });
-//     })
-//     .catch(function(error) {
-//       console.error(error);
-//     });
-//   });
-//end API
-
+app.delete('/favoritesList/:id', (req, res)=> {
+  db.favoritesList.destroy()
+  console.log(req.params.id)
+}) 
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
