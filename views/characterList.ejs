@@ -1,0 +1,25 @@
+<h1>Character Search</h1>
+<p>Search for your favorite character below...</p>
+
+<form method="GET" action="/results">
+    <label for="characterName">Character Name</label>
+    <input id="characterName" type="text" name="q">
+    <input type="submit">
+  </form> 
+
+
+<ul>
+ <% characters.forEach(function(character) { %>
+
+  <form method="POST" action="/favorite">
+    <input hidden type="text" name="name" value="<%= character.name %>">
+    <input hidden type="text" name="species" value="<%= character.species %>">
+    <input hidden type="text" name="status" value="<%= character.status %>">
+    <button type=“submit”>Add to Favorites</button>
+  </form> 
+
+
+ <li><%= character.name %></li>
+ <% }) %>
+</ul>
+

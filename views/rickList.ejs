@@ -1,0 +1,12 @@
+<div class="rickListContainer">
+    <% ricks.forEach(rick => { %>
+        <% console.log(rick) %>
+        <div class="rick-wrapper">
+            <h4><%=rick.title%></h4>
+            <div class="rick-poster">
+                <img src=<%=rick.Poster%> alt=<%=rick.title%> />
+            </div>
+            <span><%=rick.Year%></span>
+        </div>
+    <% }) %>
+</div>

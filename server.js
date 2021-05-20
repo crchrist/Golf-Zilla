@@ -6,6 +6,9 @@ const flash = require('connect-flash');
 const session = require('express-session')
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
+const { default: axios } = require('axios');
+const db = require('./models');
+
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 
@@ -52,6 +55,66 @@ app.get('/profile', isLoggedIn, (req, res) => {
   const { id, name, email } = req.user.get();
   res.render('profile', { id, name, email });
 });
+
+app.get('/rickandmorty', (req, res) => {
+axios.get('https://rickandmortyapi.com/api/character')
+.then(function(response){
+  console.log(response.data)
+  const characters = response.data.results;
+  console.log(typeof characters)
+  res.render('characterList', {characters: characters}
+  )
+})
+})
+
+app.post('/favorite', (req, res) => {
+console.log(req.body)
+db.favoritesList.create({
+  name: req.body.name,
+  species:req.body.species,
+  status: req.body.status
+})
+.then(results => {
+  console.log(results)
+  })
+
+  .catch(error => {
+    console.error(error);
+})
+res.send('this should work')
+})
+
+
+
+//API
+// app.get('/rickandmorty', (req, res) => {
+//   axios.get('https://rickandmortyapi.com/api/character')
+//     .then(function(response) {
+//       const promises = [];
+//       response.data.forEach(rickandmorty => {
+//         promises.push(new Promise((resolve, reject) => {
+//           axios.get(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=${encodeURI(rick.title)}`)
+//             .then(function(response) {
+//               resolve({
+//                 ...rickandmorty,
+//                 ...response.data,
+//               });
+//             })
+//             .catch(function(error) {
+//               reject(error);
+//             });
+//         }));
+//       }); 
+//       Promise.all(promises).then(rickandmorty => {
+//         res.render('rickandmortylist', { rickandmorty });
+//       });
+//     })
+//     .catch(function(error) {
+//       console.error(error);
+//     });
+//   });
+//end API
+
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
