@@ -11,7 +11,7 @@
 <ul>
  <% characters.forEach(function(character) { %>
   <li><%= character.name %></li>
-  <li> <img src="https://rickandmortyapi.com/api/character/avatar/20.jpeg" alt="character image"></li>
+  <li> <img src="<%= character.image %>" alt="<%= character.name %>"></li>
 
 
   <form method="POST" action="/favorite">
