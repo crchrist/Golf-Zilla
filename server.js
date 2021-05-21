@@ -69,6 +69,15 @@ axios.get('https://rickandmortyapi.com/api/character')
 })
 })
 
+app.post('/characterSearch', (req, res) => {
+  axios.get(`https://rickandmortyapi.com/api/character/?name=${req.body.characterName}`)
+  .then(function(response){
+  const characterSearch = response.data.results;
+    res.render('characterSearch', {characterSearch})
+  })
+
+})
+
 app.post('/favorite', (req, res) => {
 console.log(req.body)
 db.favoritesList.create({
