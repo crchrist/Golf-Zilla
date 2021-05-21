@@ -92,10 +92,26 @@ app.get('/favorites', (req, res) => {
   })
 })
 
-app.delete('/favoritesList/:id', (req, res)=> {
-  db.favoritesList.destroy()
+app.delete('/favorites/:id', (req, res)=> {
+  db.favoritesList.destroy({where: {
+    id: req.params.id
+  }})
+  .then(deletedFav=>{
+    console.log(deletedFav)
+    res.redirect('/favorites')
+  })
   console.log(req.params.id)
 }) 
+
+  db.favoritesList.update ({
+    status: 'Dead'
+  },{
+    where: {
+      id: 1
+  }})
+  .then(numRowsChanged=>{
+    console.log(numRowsChanged)
+  })
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {

@@ -2,7 +2,7 @@
 <ul>
     <% for (key in favorite) { %>
         <li> <%= favorite[key].name %></li>
-        <form method="POST" action="/favorite/<%= favorite[key].id %>?_method=DELETE">
+        <form method="POST" action="/favorites/<%= favorite[key].id %>?_method=DELETE">
             <input type="submit" value="Delete">
         </form>
     <% } %>
