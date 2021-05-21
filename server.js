@@ -74,7 +74,8 @@ console.log(req.body)
 db.favoritesList.create({
   name: req.body.name,
   species:req.body.species,
-  status: req.body.status
+  status: req.body.status,
+  image: req.body.image
 })
 .then(results => {
   console.log(results)

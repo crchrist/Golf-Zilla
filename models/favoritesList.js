@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   favoritesList.init({
     name: DataTypes.STRING,
     status: DataTypes.STRING,
-    species: DataTypes.STRING
+    species: DataTypes.STRING,
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'favoritesList',

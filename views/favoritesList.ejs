@@ -7,6 +7,8 @@
 <ul>
     <% for (key in favorite) { %>
         <li> <%= favorite[key].name %></li>
+  <li> <img src="<%= favorite[key].image %>" alt="<%= favorite[key].name %>"></li>
+
         <form method="POST" action="/favorites/<%= favorite[key].id %>?_method=DELETE">
             <input type="submit" value="Remove From Favorites">
         </form>
