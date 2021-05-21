@@ -83,7 +83,7 @@ db.favoritesList.create({
   .catch(error => {
     console.error(error);
 })
-res.send('this should work')
+res.redirect('/favorites')
 })
 
 app.get('/favorites', (req, res) => {
@@ -103,15 +103,17 @@ app.delete('/favorites/:id', (req, res)=> {
   console.log(req.params.id)
 }) 
 
+app.put('/favorites/:id', (req, res)=> {
   db.favoritesList.update ({
     status: 'Dead'
   },{
     where: {
-      id: 1
+      id: req.params.id
   }})
   .then(numRowsChanged=>{
     console.log(numRowsChanged)
-  })
+})
+})
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {

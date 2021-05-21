@@ -1,12 +1,26 @@
 <h2>A list of all your favorite Rick and Morty characters:</h2>
+
+<a href="http://localhost:3000/rickandmorty">Back to Characters List</a>
+<br>
+<br>
+
 <ul>
     <% for (key in favorite) { %>
         <li> <%= favorite[key].name %></li>
         <form method="POST" action="/favorites/<%= favorite[key].id %>?_method=DELETE">
-            <input type="submit" value="Delete">
+            <input type="submit" value="Remove From Favorites">
+        </form>
+        <form method="POST" action="/favorites/<%= favorite[key].id %>?_method=PUT">
+            <input type="submit" value="Change Status to Dead">
         </form>
     <% } %>
+    
 </ul>
+
+<br>
+<br>
+
+<a href="http://localhost:3000/rickandmorty">Back to Characters List</a>
 
 
 

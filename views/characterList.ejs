@@ -10,6 +10,9 @@
 
 <ul>
  <% characters.forEach(function(character) { %>
+  <li><%= character.name %></li>
+  <li> <img src="https://rickandmortyapi.com/api/character/avatar/20.jpeg" alt="character image"></li>
+
 
   <form method="POST" action="/favorite">
     <input hidden type="text" name="name" value="<%= character.name %>">
@@ -18,8 +21,6 @@
     <button type=“submit”>Add to Favorites</button>
   </form> 
 
-
- <li><%= character.name %></li>
  <% }) %>
 </ul>
 
