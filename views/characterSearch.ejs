@@ -10,13 +10,14 @@
 <ul>
     <% characterSearch.forEach(characters => { %>
        <li><%=characters.name%></li>
+       <li style="list-style-type: none;"> <img src="<%= characters.image %>" alt="<%= characters.name %>"></li>
 
-
+    
        <form method="POST" action="/favorite">
-        <input hidden type="text" name="name" value="<%= character.name %>">
-        <input hidden type="text" name="species" value="<%= character.species %>">
-        <input hidden type="text" name="status" value="<%= character.status %>">
-        <input hidden type="text" name="image" value="<%= character.image %>">
+        <input hidden type="text" name="name" value="<%= characters.name %>">
+        <input hidden type="text" name="species" value="<%= characters.species %>">
+        <input hidden type="text" name="status" value="<%= characters.status %>">
+        <input hidden type="text" name="image" value="<%= characters.image %>">
     
         <button type=“submit”>Add to Favorites</button>
         <br>

@@ -122,6 +122,7 @@ app.put('/favorites/:id', (req, res)=> {
   }})
   .then(numRowsChanged=>{
     console.log(numRowsChanged)
+    res.redirect('/favorites')
 })
 })
 
