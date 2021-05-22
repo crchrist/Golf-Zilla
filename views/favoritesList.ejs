@@ -6,10 +6,10 @@
 
 <ul>
     <% for (key in favorite) { %>
-        <li> <%= favorite[key].name %> </li>
-        <li> <img src="<%= favorite[key].image %>" alt="<%= favorite[key].name %>"></li>
-        <li> Status = <%=favorite[key].status %></li>
-        <li> Species = <%=favorite[key].species %></li>
+        <li style="list-style-type: none;"> <%= favorite[key].name %> </li>
+        <li style="list-style-type: none;"> <img src="<%= favorite[key].image %>" alt="<%= favorite[key].name %>"></li>
+        <li style="list-style-type: none;"> Status = <%=favorite[key].status %></li>
+        <li style="list-style-type: none;"> Species = <%=favorite[key].species %></li>
 
         <form method="POST" action="/favorites/<%= favorite[key].id %>?_method=DELETE">
             <input type="submit" value="Remove From Favorites">
