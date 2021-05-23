@@ -4,6 +4,12 @@
 <br>
 <br>
 
+<form method="POST" action="/characterSearch">
+    <label for="characterName">Character Name</label>
+    <input id="characterName" type="text" name="characterName">
+    <input type="submit">
+  </form> 
+<br>
 <ul>
     <% for (key in favorite) { %>
         <li style="list-style-type: none;"> <%= favorite[key].name %> </li>
