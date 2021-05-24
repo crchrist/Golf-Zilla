@@ -1,9 +1,80 @@
 nav ul li {
   text-decoration: none;
-  display: inline-block;
+  list-style-type: none;
+  text-align: right;
   margin-right: .3em;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+a {
+  color: chartreuse;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 h1 {
   color: chartreuse;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
+
+
+body{
+background-image: linear-gradient(to bottom right, teal, green);
+text-align: center;
+font-family: "Lucida Console", "Courier New", monospace;
+}
+
+header {
+  background-image: linear-gradient(green, chartreuse);
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+form {
+  color: chartreuse;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.subButton:hover {
+  color: chartreuse;
+  box-shadow: 0 0 20px 10px #0ff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+ul {
+  color: chartreuse;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+input {
+  color: chartreuse;
+  background: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+input:hover {
+  color: chartreuse;
+  box-shadow: 0 0 20px 10px #0ff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+button {
+  color: chartreuse;
+  background: black;
+  /* box-shadow: 0 0 40px 20px #0ff; */
+  font-family: "Lucida Console", "Courier New", monospace;
+  
+}
+
+button:hover {
+    color: chartreuse;
+    box-shadow: 0 0 20px 10px #0ff;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
