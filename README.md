@@ -38,6 +38,19 @@ To utilize the API used for this application go to: https://rickandmortyapi.com/
 ![Startup-Image-4](https://github.com/crchrist/Rick-and-Morty/blob/main/Screen%20Shot%202021-05-23%20at%2011.01.01%20PM.png?raw=true)
 
 
+# TECHNOLOGIES USED
+* Node
+* Express 
+* EJS 
+* Passport and Bcrypt
+* Sequelize
+* CSS Bootstrap
+
+# TO USE
+1. Fork and Clone this respository to your local machine
+2. Open the directory in your text editor of choice
+3. Install dependencies and set up your database to work in your local port
+
 ## RETRIEVING THE API 
 
 ```js
@@ -108,7 +121,7 @@ app.put('/favorites/:id', (req, res)=> {
 ```
 
 
-## ACCESS ONLINE
+# ACCESS ONLINE
 https://rmcharacters.herokuapp.com/
 
 
