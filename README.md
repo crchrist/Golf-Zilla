@@ -14,7 +14,9 @@ This application allows for a quick character search of 671 of the Rick and Mort
 
 ### API USEAGE
 
-To utilize the API used for this application go to: https://rickandmortyapi.com/documentation/#get-all-characters and use the base URL provide. There is no API key needed. 
+To utilize the API used for this application go to:
+ https://rickandmortyapi.com/documentation/#get-all-characters 
+ Use the base URL provided, There is no API key needed. 
 
 # HOMEPAGE:
 <!-- Home page image go here  -->
@@ -128,9 +130,9 @@ https://rmcharacters.herokuapp.com/
 
 # Future Considerations
 <br>
-- Page layout with more characters available to scroll through. 
+* Page layout with more characters available to scroll through. 
 <br>
-- Add page option, in order to scroll through characters by page. 
+* Add page option, in order to scroll through characters by page. 
 <br>
-- Have search option available by list to have easier access to scroll through character names.  
+* Have search option available by list to have easier access to scroll through character names.  
 
