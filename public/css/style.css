@@ -16,16 +16,10 @@ h1 {
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
-
 body{
 background-image: linear-gradient(to bottom right, teal, green);
 text-align: center;
 font-family: "Lucida Console", "Courier New", monospace;
-}
-
-header {
-  background-image: linear-gradient(green, chartreuse);
-  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 form {
