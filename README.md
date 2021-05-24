@@ -53,7 +53,7 @@ To utilize the API used for this application go to:
 2. Open the directory in your text editor of choice
 3. Install dependencies and set up your database to work in your local port
 
-## RETRIEVING THE API 
+## RETRIEVING THE CHARACTER LIST 
 
 ```js
 app.get('/rickandmorty', (req, res) => {
