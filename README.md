@@ -24,7 +24,7 @@ To utilize the API used for this application go to: https://rickandmortyapi.com/
 # SIGNUP PAGE
 <!-- Signup page image go here  -->
 
-![Startup-Image-2](https://github.com/crchrist/Rick-and-Morty/blob/main/Screen%20Shot%202021-05-23%20at%2010.58.14%20PM.png?raw=true)
+![Startup-Image-2](https://github.com/crchrist/Rick-and-Morty/blob/main/Screen%20Shot%202021-05-24%20at%206.28.49%20AM.png?raw=true)
 <br>
 
 # LOGIN PAGE
