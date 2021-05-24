@@ -1,7 +1,7 @@
 # Proposal
 Requirements for the weekend
 
-`1` An application name / concept 
+`1` Rick and Morty character search/favorites list
 
 `2` A repo for your project 2 (built from express_auth template)
 

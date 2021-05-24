@@ -18,24 +18,24 @@ To utilize the API used for this application go to: https://rickandmortyapi.com/
 
 # HOMEPAGE:
 <!-- Home page image go here  -->
-![Startup-Image-1](/Users/codychrist/Desktop/SEI-412/unit-two/rickandmorty/Screen Shot 2021-05-23 at 10.43.42 PM.png)
+![Startup-Image-1](https://github.com/crchrist/Rick-and-Morty/blob/main/Screen%20Shot%202021-05-23%20at%2010.43.42%20PM.png?raw=true)
 <br>
 
 # SIGNUP PAGE
 <!-- Signup page image go here  -->
 
-![Startup-Image-2](/Users/codychrist/Desktop/SEI-412/unit-two/rickandmorty/Screen Shot 2021-05-23 at 10.58.14 PM.png)
+![Startup-Image-2](https://github.com/crchrist/Rick-and-Morty/blob/main/Screen%20Shot%202021-05-23%20at%2010.58.14%20PM.png?raw=true)
 <br>
 
 # LOGIN PAGE
 <!-- Login page image go here  -->
 
-![Startup-Image-3](/Users/codychrist/Desktop/SEI-412/unit-two/rickandmorty/Screen Shot 2021-05-23 at 10.59.59 PM.png)
+![Startup-Image-3](https://github.com/crchrist/Rick-and-Morty/blob/main/Screen%20Shot%202021-05-23%20at%2010.59.59%20PM.png?raw=true)
 <br>
 
 # CHARACTER SEARCH PAGE
 <!-- Character search page image go here  -->
-![Startup-Image-4](/Users/codychrist/Desktop/SEI-412/unit-two/rickandmorty/Screen Shot 2021-05-23 at 11.01.01 PM.png)
+![Startup-Image-4](https://github.com/crchrist/Rick-and-Morty/blob/main/Screen%20Shot%202021-05-23%20at%2011.01.01%20PM.png?raw=true)
 
 
 ## ACCESS ONLINE
