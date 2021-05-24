@@ -38,6 +38,76 @@ To utilize the API used for this application go to: https://rickandmortyapi.com/
 ![Startup-Image-4](https://github.com/crchrist/Rick-and-Morty/blob/main/Screen%20Shot%202021-05-23%20at%2011.01.01%20PM.png?raw=true)
 
 
+## RETRIEVING THE API 
+
+```js
+app.get('/rickandmorty', (req, res) => {
+axios.get('https://rickandmortyapi.com/api/character')
+.then(function(response){
+  console.log(response.data)
+  const characters = response.data.results;
+  console.log(typeof characters)
+  res.render('characterList', {characters: characters}
+  )
+})
+})
+```
+
+## CREATING A FAVORITE
+
+```js
+app.post('/favorite', (req, res) => {
+console.log(req.body)
+db.favoritesList.create({
+  name: req.body.name,
+  species:req.body.species,
+  status: req.body.status,
+  image: req.body.image
+})
+.then(results => {
+  console.log(results)
+  })
+
+  .catch(error => {
+    console.error(error);
+})
+res.redirect('/favorites')
+})
+```
+
+## REMOVING A FAVORITE
+
+```js
+app.delete('/favorites/:id', (req, res)=> {
+  db.favoritesList.destroy({where: {
+    id: req.params.id
+  }})
+  .then(deletedFav=>{
+    console.log(deletedFav)
+    res.redirect('/favorites')
+  })
+  console.log(req.params.id)
+}) 
+```
+
+## UPDATING CHARACTER STATUS
+
+```js
+app.put('/favorites/:id', (req, res)=> {
+  db.favoritesList.update ({
+    status: 'Dead'
+  },{
+    where: {
+      id: req.params.id
+  }})
+  .then(numRowsChanged=>{
+    console.log(numRowsChanged)
+    res.redirect('/favorites')
+})
+})
+```
+
+
 ## ACCESS ONLINE
 https://rmcharacters.herokuapp.com/
 
