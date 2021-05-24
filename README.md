@@ -17,14 +17,14 @@ This application allows for a quick character search of 671 of the Rick and Mort
 To utilize the API used for this application go to: https://rickandmortyapi.com/documentation/#get-all-characters and use the base URL provide. There is no API key needed. 
 
 # HOMEPAGE:
-<!-- Images go here  -->
+<!-- Images go here 
 ![Startup-Image-1](/Users/codychrist/Desktop/SEI-412/unit-two/rickandmorty/Screen Shot 2021-05-23 at 10.43.42 PM.png)
 <br>
 ![Startup-Image-2](https://github.com/crchrist/connect-four/blob/main/docs/Screen-Shot-2.png?raw=true)
 <br>
 ![Startup-Image-3](https://github.com/crchrist/connect-four/blob/main/docs/Screen-Shot-3.png?raw=true)
 <br>
-![Startup-Image-4](https://github.com/crchrist/connect-four/blob/main/docs/Screen-Shot-4.png?raw=true)
+![Startup-Image-4](https://github.com/crchrist/connect-four/blob/main/docs/Screen-Shot-4.png?raw=true) -->
 
 
 # HOW TO INSTALL
